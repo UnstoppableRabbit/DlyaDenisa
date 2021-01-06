@@ -1,0 +1,39 @@
+﻿<Window x:Class="LibraryAdminApp.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryAdminApp"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="475" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="290"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <SolidColorBrush Color="#E6E6FA"></SolidColorBrush>
+        </Grid.Background>
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+            <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">available author</TextBlock>
+            <TextBlock  Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Author's id:</TextBlock>
+            <TextBox x:Name="Authors_id_TBox" Margin="10,0,10,0" FontSize="18"></TextBox>
+
+            <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Title:</TextBlock>
+            <TextBox Margin="10,0,10,0" x:Name="Title_TBox" FontSize="18"></TextBox>
+
+            <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Count of books:</TextBlock>
+            <TextBox  Margin="10,0,10,0" x:Name="Count_TBox" FontSize="18"></TextBox>
+
+            <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Price:</TextBlock>
+            <TextBox Margin="10,0,10,0" x:Name="Price_TBox" FontSize="18"></TextBox>
+        </StackPanel>
+        <Button Click="Add_book_Click" Grid.Row="0" Height="40" Width="100" FontSize="14" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,0" >Add book</Button>
+        <StackPanel Grid.Row="1">
+            <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">new author</TextBlock>
+            <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Author's fullname:</TextBlock>
+            <TextBox Margin="10,0,10,0" x:Name="Fullname_author_TBox" FontSize="18"></TextBox>       
+        </StackPanel>
+        <Button Grid.Row="1" Height="40" Width="100" FontSize="14" Click="Add_author_Ckick" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,0" >Add author</Button>
+    </Grid>
+</Window>

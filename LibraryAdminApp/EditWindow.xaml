@@ -1,0 +1,48 @@
+﻿<Window x:Class="LibraryAdminApp.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryAdminApp"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="390" Width="600">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+                <SolidColorBrush Color="#E6E6FA"></SolidColorBrush>
+            </Grid.Background>
+            <StackPanel>
+            <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">edit book's info</TextBlock>
+            <TextBlock  Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Book's ID:</TextBlock>
+                <TextBox x:Name="Bookid_edit_TBox" Margin="10,0,10,0" FontSize="18"></TextBox>
+
+            <TextBlock  Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Authors's ID:</TextBlock>
+            <TextBox x:Name="Authorid_edit_TBox" Margin="10,0,10,0" FontSize="18"></TextBox>
+
+            <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Title:</TextBlock>
+                <TextBox Margin="10,0,10,0" x:Name="Title_edit_TBox" FontSize="18"></TextBox>
+
+                <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Count of books:</TextBlock>
+                <TextBox  Margin="10,0,10,0" x:Name="Count_edit_TBox" FontSize="18"></TextBox>
+
+                <TextBlock Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Price:</TextBlock>
+                <TextBox Margin="10,0,10,0" x:Name="Price_edit_TBox" FontSize="18"></TextBox>
+            </StackPanel>
+        <Button Click="Edit_book_Click" Grid.Row="0" Height="40" Width="100" FontSize="14" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,0" >Edit book</Button>
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">delete book</TextBlock>
+            <TextBlock  Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Book's ID:</TextBlock>
+            <TextBox  Margin="10,0,10,0" x:Name="Bookid_delete_TBox" FontSize="18"></TextBox>
+            <Button Click="Delete_book_Click" Width="100" Height="40" Margin="10" FontSize="14" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" HorizontalAlignment="Right">Delete book</Button>
+            
+            <TextBlock FontSize="26" FontWeight="Bold" Margin="0,47,0,0" Foreground="BlueViolet" HorizontalAlignment="Center">delete author</TextBlock>
+            <TextBlock  Margin="10,0" FontSize="16" FontWeight="Bold" Foreground="BlueViolet">Author's ID:</TextBlock>
+            <TextBox  Margin="10,0,10,0" x:Name="Author_delete_TBox" FontSize="18"></TextBox>
+        </StackPanel>
+        <Button Width="100" Click="Delete_author_Click" Grid.Column="1" Height="40" Margin="10,0" FontSize="14" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" VerticalAlignment="Bottom" HorizontalAlignment="Right">Delete book</Button>
+    </Grid>
+</Window>

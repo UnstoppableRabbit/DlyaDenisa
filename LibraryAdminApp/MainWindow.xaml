@@ -1,0 +1,46 @@
+﻿<Window x:Class="LibraryAdminApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryAdminApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="books">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="0" IsReadOnly="True" x:Name ="BooksGrid" HorizontalGridLinesBrush="DarkGray"
+                RowBackground="LightBlue" AlternatingRowBackground="White"
+                Loaded="BookGrid_Loaded">
+                    </DataGrid>
+                    <Button Cursor="Hand" FontSize="14" Background="AntiqueWhite" FontWeight="Bold" Foreground="BlueViolet" Grid.Row="1" Width="100" Click="Refresh_Click" HorizontalAlignment="Right">Refresh</Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="add book">
+                <Grid Background="#E6E6FA">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center" Grid.Column="0">
+                        <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">Add new book</TextBlock>
+                        <Button  Cursor="Hand" Click="Add_Click" Width="150" Height="160" BorderBrush="#E6E6FA" Background="Transparent">
+                            <Image Source="C:\Users\ASUS\Downloads\knigga.png"></Image>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" Grid.Column="1">
+                        <TextBlock FontSize="26" FontWeight="Bold" Margin="10" Foreground="BlueViolet" HorizontalAlignment="Center">Edit books</TextBlock>
+                        <Button Cursor="Hand" Width="150" Click="Change_Click" Height="160" BorderBrush="#E6E6FA" Background="Transparent">
+                            <Image Source="C:\Users\ASUS\Downloads\pero.jpg"></Image>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
