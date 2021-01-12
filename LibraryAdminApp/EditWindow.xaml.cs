@@ -43,7 +43,7 @@ namespace LibraryAdminApp
             }
             catch (Exception)
             {
-                MessageBox.Show("ti ДАЛБАЕБ");
+                MessageBox.Show("you entered something wrong");
             }
             connection.Close();
         }
